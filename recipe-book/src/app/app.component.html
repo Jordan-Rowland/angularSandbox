@@ -1,0 +1,14 @@
+
+<app-header (navChange)="changeNav($event)"></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-recipes
+          *ngIf="currPage === 'RECIPES'">
+      </app-recipes>
+      <app-shopping-list
+          *ngIf="currPage === 'SHOPPING_LIST'">
+      </app-shopping-list>
+    </div>
+  </div>
+</div>

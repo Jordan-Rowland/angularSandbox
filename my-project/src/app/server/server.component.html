@@ -1,0 +1,19 @@
+
+
+<h4 class="server" 
+    [ngStyle]="{ 'background-color': getColor() }"
+    [ngClass]="{ online: getServerStatus() === 'online', offline: getServerStatus() === 'offline' }">
+        Server {{ serverId }} is {{ getServerStatus() }}
+</h4>
+
+<button (click)="onButtonClick()">Show Details</button>
+
+<p *ngIf="showDetails">{{ details }}</p>
+
+<div  *ngIf="showDetails">
+    <p *ngFor="let log of buttonClickLog; index as index"
+        [ngClass]="{ fifthLog: index > 2 }"
+        [ngStyle]="{ 'color': index > 2 && '#2c2c2c' }">
+        {{ log }}
+    </p>
+</div>

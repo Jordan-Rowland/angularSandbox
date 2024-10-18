@@ -1,0 +1,7 @@
+p {
+    border: 2px solid hsl(122, 70%, 59%);
+    background-color: hsl(120, 36%, 78%);
+    color: rgb(0, 69, 8);
+    padding: .25em;
+    width: 100px;
+}
