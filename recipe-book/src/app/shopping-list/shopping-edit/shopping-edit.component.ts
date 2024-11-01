@@ -16,7 +16,7 @@ export class ShoppingEditComponent {
   
   addIngredient() {
     if (!this.name || !this.amount) { return; }
-    this.shoppingListService.addIngredient({ name: this.name, amount: this.amount });
+    this.shoppingListService.addIngredients([{ name: this.name, amount: this.amount }]);
     this.name = "";
     this.amount = null;
   }
